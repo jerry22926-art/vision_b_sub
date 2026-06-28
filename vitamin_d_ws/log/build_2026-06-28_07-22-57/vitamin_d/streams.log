@@ -1,0 +1,33 @@
+[2.830s] Invoking command in '/home/vitamind/vitamin_d_ws/src/vitamin_d': PYTHONPATH=/home/vitamind/vitamin_d_ws/build/vitamin_d/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vitamind/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vitamin_d build --build-base /home/vitamind/vitamin_d_ws/build/vitamin_d/build install --record /home/vitamind/vitamin_d_ws/build/vitamin_d/install.log --install-scripts $base/lib/vitamin_d --single-version-externally-managed install_data
+[3.887s] running egg_info
+[3.889s] creating ../../build/vitamin_d/vitamin_d.egg-info
+[3.890s] writing ../../build/vitamin_d/vitamin_d.egg-info/PKG-INFO
+[3.892s] writing dependency_links to ../../build/vitamin_d/vitamin_d.egg-info/dependency_links.txt
+[3.893s] writing entry points to ../../build/vitamin_d/vitamin_d.egg-info/entry_points.txt
+[3.893s] writing requirements to ../../build/vitamin_d/vitamin_d.egg-info/requires.txt
+[3.894s] writing top-level names to ../../build/vitamin_d/vitamin_d.egg-info/top_level.txt
+[3.894s] writing manifest file '../../build/vitamin_d/vitamin_d.egg-info/SOURCES.txt'
+[3.901s] reading manifest file '../../build/vitamin_d/vitamin_d.egg-info/SOURCES.txt'
+[3.904s] writing manifest file '../../build/vitamin_d/vitamin_d.egg-info/SOURCES.txt'
+[3.905s] running build
+[3.906s] running build_py
+[3.906s] creating /home/vitamind/vitamin_d_ws/build/vitamin_d/build
+[3.907s] creating /home/vitamind/vitamin_d_ws/build/vitamin_d/build/lib
+[3.907s] creating /home/vitamind/vitamin_d_ws/build/vitamin_d/build/lib/vitamin_d
+[3.908s] copying vitamin_d/__init__.py -> /home/vitamind/vitamin_d_ws/build/vitamin_d/build/lib/vitamin_d
+[3.908s] running install
+[3.909s] running install_lib
+[3.912s] creating /home/vitamind/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d
+[3.913s] copying /home/vitamind/vitamin_d_ws/build/vitamin_d/build/lib/vitamin_d/__init__.py -> /home/vitamind/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d
+[3.915s] byte-compiling /home/vitamind/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d/__init__.py to __init__.cpython-310.pyc
+[3.917s] running install_data
+[3.917s] creating /home/vitamind/vitamin_d_ws/install/vitamin_d/share/ament_index
+[3.918s] creating /home/vitamind/vitamin_d_ws/install/vitamin_d/share/ament_index/resource_index
+[3.919s] creating /home/vitamind/vitamin_d_ws/install/vitamin_d/share/ament_index/resource_index/packages
+[3.919s] copying resource/vitamin_d -> /home/vitamind/vitamin_d_ws/install/vitamin_d/share/ament_index/resource_index/packages
+[3.919s] copying package.xml -> /home/vitamind/vitamin_d_ws/install/vitamin_d/share/vitamin_d
+[3.919s] running install_egg_info
+[3.930s] Copying ../../build/vitamin_d/vitamin_d.egg-info to /home/vitamind/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d-0.0.0-py3.10.egg-info
+[3.936s] running install_scripts
+[4.012s] writing list of installed files to '/home/vitamind/vitamin_d_ws/build/vitamin_d/install.log'
+[4.132s] Invoked command in '/home/vitamind/vitamin_d_ws/src/vitamin_d' returned '0': PYTHONPATH=/home/vitamind/vitamin_d_ws/build/vitamin_d/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vitamind/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vitamin_d build --build-base /home/vitamind/vitamin_d_ws/build/vitamin_d/build install --record /home/vitamind/vitamin_d_ws/build/vitamin_d/install.log --install-scripts $base/lib/vitamin_d --single-version-externally-managed install_data

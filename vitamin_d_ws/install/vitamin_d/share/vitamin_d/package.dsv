@@ -1,0 +1,6 @@
+source;share/vitamin_d/hook/pythonpath.ps1
+source;share/vitamin_d/hook/pythonpath.dsv
+source;share/vitamin_d/hook/pythonpath.sh
+source;share/vitamin_d/hook/ament_prefix_path.ps1
+source;share/vitamin_d/hook/ament_prefix_path.dsv
+source;share/vitamin_d/hook/ament_prefix_path.sh

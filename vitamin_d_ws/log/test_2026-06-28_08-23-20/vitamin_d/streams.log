@@ -1,0 +1,21 @@
+[1.229s] Invoking command in '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d': AMENT_PREFIX_PATH=/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/pytest.xml --junit-prefix=vitamin_d -o cache_dir=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[2.705s] ============================= test session starts ==============================
+[2.706s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[2.707s] cachedir: /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/.pytest_cache
+[2.708s] rootdir: /home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d
+[2.708s] plugins: ament-lint-0.12.15, ament-xmllint-0.12.15, ament-flake8-0.12.15, ament-pep257-0.12.15, launch-testing-1.0.14, launch-testing-ros-0.19.13, ament-copyright-0.12.15, colcon-core-0.21.0, cov-3.0.0
+[2.708s] collected 3 items
+[2.709s] 
+[2.728s] test/test_copyright.py s                                                 [ 33%]
+[3.137s] test/test_flake8.py .                                                    [ 66%]
+[3.255s] 
+[3.255s] =============================== warnings summary ===============================
+[3.256s] test/test_flake8.py::test_flake8
+[3.256s] test/test_flake8.py::test_flake8
+[3.257s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[3.258s] 
+[3.259s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[3.259s] test/test_pep257.py .                                                    [100%]
+[3.260s] - generated xml file: /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/pytest.xml -
+[3.260s] =================== 2 passed, 1 skipped, 2 warnings in 0.85s ===================
+[3.556s] Invoked command in '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d' returned '0': AMENT_PREFIX_PATH=/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/pytest.xml --junit-prefix=vitamin_d -o cache_dir=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest

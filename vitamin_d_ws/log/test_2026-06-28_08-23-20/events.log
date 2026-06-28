@@ -1,0 +1,61 @@
+[0.000000] (-) TimerEvent: {}
+[0.000552] (vitamin_d) JobQueued: {'identifier': 'vitamin_d', 'dependencies': OrderedDict([('vitamin_d', '/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d')])}
+[0.001444] (vitamin_d) JobStarted: {'identifier': 'vitamin_d'}
+[0.099086] (-) TimerEvent: {}
+[0.199450] (-) TimerEvent: {}
+[0.299794] (-) TimerEvent: {}
+[0.400122] (-) TimerEvent: {}
+[0.500461] (-) TimerEvent: {}
+[0.600869] (-) TimerEvent: {}
+[0.701191] (-) TimerEvent: {}
+[0.801596] (-) TimerEvent: {}
+[0.901993] (-) TimerEvent: {}
+[1.002339] (-) TimerEvent: {}
+[1.102711] (-) TimerEvent: {}
+[1.203166] (-) TimerEvent: {}
+[1.223754] (vitamin_d) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/vitamind', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'USER': 'vitamind', 'SSH_CLIENT': '192.168.137.1 63080 22', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/vitamind/.cursor-server/bin/linux-arm64/46fb7aafe279d7c72346febe68c2e004b7d1de60/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'tty', 'CURSOR_RIPGREP_PATH': '/home/vitamind/.cursor-server/bin/linux-arm64/46fb7aafe279d7c72346febe68c2e004b7d1de60/node_modules/@vscode/ripgrep/bin/rg', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/vitamind/.cursor-server/bin/linux-arm64/46fb7aafe279d7c72346febe68c2e004b7d1de60/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/vitamind', 'OLDPWD': '/home/vitamind/vitamin_d/vitamin_d_ws', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-84b47420-f170-44bc-ac9e-911f4790ad0e.sock', 'ROS_PYTHON_VERSION': '3', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'humble', 'OVSX_REGISTRY_URL': 'https://open-vsx.org', 'LOGNAME': 'vitamind', 'FORCE_COLOR': '0', 'VSCODE_HANDLES_SIGPIPE': 'true', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'CURSOR_LAYOUT': 'unifiedAgent', 'XDG_SESSION_CLASS': 'user', 'TERM': 'dumb', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/vitamind/.cursor-server/bin/linux-arm64/46fb7aafe279d7c72346febe68c2e004b7d1de60/node_modules/@vscode/ripgrep/bin:/home/vitamind/.cursor-server/bin/linux-arm64/46fb7aafe279d7c72346febe68c2e004b7d1de60/bin/remote-cli:/opt/ros/humble/bin:/home/vitamind/.cursor-server/bin/linux-arm64/46fb7aafe279d7c72346febe68c2e004b7d1de60/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'VSCODE_AGENT_FOLDER': '/home/vitamind/.cursor-server', 'XDG_RUNTIME_DIR': '/run/user/1000', 'AGENT_TRANSCRIPTS': '/home/vitamind/.cursor/projects/home-vitamind/agent-transcripts', 'CURSOR_AGENT': '1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': '', 'AMENT_PREFIX_PATH': '/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d:/opt/ros/humble', 'SHELL': '/bin/bash', 'VSCODE_SERVER_SHUTDOWN_TIMEOUT': '300', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d', 'SSH_CONNECTION': '192.168.137.1 63080 192.168.137.254 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'CURSOR_CONVERSATION_ID': '398479ff-89f5-486c-90e0-521a921fd31e', 'PYTHONPATH': '/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', '_ZO_DOCTOR': '0', 'PYTHONDONTWRITEBYTECODE': '1', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/pytest.xml --junit-prefix=vitamin_d -o cache_dir=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/.pytest_cache'}, 'shell': False}
+[1.303328] (-) TimerEvent: {}
+[1.403749] (-) TimerEvent: {}
+[1.504145] (-) TimerEvent: {}
+[1.604499] (-) TimerEvent: {}
+[1.704930] (-) TimerEvent: {}
+[1.805286] (-) TimerEvent: {}
+[1.905628] (-) TimerEvent: {}
+[2.005958] (-) TimerEvent: {}
+[2.106302] (-) TimerEvent: {}
+[2.206710] (-) TimerEvent: {}
+[2.307199] (-) TimerEvent: {}
+[2.407552] (-) TimerEvent: {}
+[2.507911] (-) TimerEvent: {}
+[2.608260] (-) TimerEvent: {}
+[2.706819] (vitamin_d) StdoutLine: {'line': b'============================= test session starts ==============================\n'}
+[2.707474] (vitamin_d) StdoutLine: {'line': b'platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0\n'}
+[2.708024] (vitamin_d) StdoutLine: {'line': b'cachedir: /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/.pytest_cache\n'}
+[2.709030] (-) TimerEvent: {}
+[2.709235] (vitamin_d) StdoutLine: {'line': b'rootdir: /home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d\n'}
+[2.709776] (vitamin_d) StdoutLine: {'line': b'plugins: ament-lint-0.12.15, ament-xmllint-0.12.15, ament-flake8-0.12.15, ament-pep257-0.12.15, launch-testing-1.0.14, launch-testing-ros-0.19.13, ament-copyright-0.12.15, colcon-core-0.21.0, cov-3.0.0\n'}
+[2.710168] (vitamin_d) StdoutLine: {'line': b'collected 3 items\n'}
+[2.710528] (vitamin_d) StdoutLine: {'line': b'\n'}
+[2.729558] (vitamin_d) StdoutLine: {'line': b'test/test_copyright.py s                                                 [ 33%]\n'}
+[2.809184] (-) TimerEvent: {}
+[2.909526] (-) TimerEvent: {}
+[3.009991] (-) TimerEvent: {}
+[3.110395] (-) TimerEvent: {}
+[3.138676] (vitamin_d) StdoutLine: {'line': b'test/test_flake8.py .                                                    [ 66%]\n'}
+[3.210556] (-) TimerEvent: {}
+[3.256102] (vitamin_d) StderrLine: {'line': b'\n'}
+[3.256756] (vitamin_d) StderrLine: {'line': b'=============================== warnings summary ===============================\n'}
+[3.257436] (vitamin_d) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[3.257939] (vitamin_d) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[3.258423] (vitamin_d) StderrLine: {'line': b'  Warning: SelectableGroups dict interface is deprecated. Use select.\n'}
+[3.259551] (vitamin_d) StderrLine: {'line': b'\n'}
+[3.260241] (vitamin_d) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/warnings.html\n'}
+[3.260870] (vitamin_d) StdoutLine: {'line': b'test/test_pep257.py .                                                    [100%]\n'}
+[3.261436] (vitamin_d) StdoutLine: {'line': b'- generated xml file: /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/pytest.xml -\n'}
+[3.261949] (vitamin_d) StdoutLine: {'line': b'=================== 2 passed, 1 skipped, 2 warnings in 0.85s ===================\n'}
+[3.310851] (-) TimerEvent: {}
+[3.411492] (-) TimerEvent: {}
+[3.512144] (-) TimerEvent: {}
+[3.557150] (vitamin_d) CommandEnded: {'returncode': 0}
+[3.558413] (vitamin_d) JobEnded: {'identifier': 'vitamin_d', 'rc': 0}
+[3.560522] (-) EventReactorShutdown: {}

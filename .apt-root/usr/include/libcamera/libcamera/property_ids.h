@@ -1,0 +1,40 @@
+/* SPDX-License-Identifier: LGPL-2.1-or-later */
+/*
+ * Copyright (C) 2019, Google Inc.
+ *
+ * property_ids.h - Property ID list
+ *
+ * This file is auto-generated. Do not edit.
+ */
+
+#ifndef __LIBCAMERA_PROPERTY_IDS_H__
+#define __LIBCAMERA_PROPERTY_IDS_H__
+
+#include <stdint.h>
+
+#include <libcamera/controls.h>
+
+namespace libcamera {
+
+namespace properties {
+
+enum {
+	LOCATION = 1,
+	ROTATION = 2,
+};
+
+enum LocationValues {
+	CameraLocationFront = 0,
+	CameraLocationBack = 1,
+	CameraLocationExternal = 2,
+};
+extern const Control<int32_t> Location;
+extern const Control<int32_t> Rotation;
+
+extern const ControlIdMap properties;
+
+} /* namespace properties */
+
+} /* namespace libcamera */
+
+#endif /* __LIBCAMERA_PROPERTY_IDS_H__ */

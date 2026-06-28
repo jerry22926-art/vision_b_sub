@@ -1,0 +1,83 @@
+Metadata-Version: 2.4
+Name: ziglang
+Version: 0.16.0
+Summary: Zig is a general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software.
+Description-Content-Type: text/markdown
+License-Expression: MIT
+License-File: ziglang/LICENSE
+License-File: ziglang/lib/libc/glibc/LICENSES
+License-File: ziglang/lib/libc/mingw/COPYING
+License-File: ziglang/lib/libc/musl/COPYRIGHT
+License-File: ziglang/lib/libc/wasi/LICENSE
+License-File: ziglang/lib/libc/wasi/LICENSE-APACHE
+License-File: ziglang/lib/libc/wasi/LICENSE-APACHE-LLVM
+License-File: ziglang/lib/libc/wasi/LICENSE-MIT
+License-File: ziglang/lib/libc/wasi/libc-bottom-half/cloudlibc/LICENSE
+License-File: ziglang/lib/libc/wasi/libc-top-half/musl/COPYRIGHT
+License-File: ziglang/lib/libcxx/LICENSE.TXT
+License-File: ziglang/lib/libcxxabi/LICENSE.TXT
+License-File: ziglang/lib/libunwind/LICENSE.TXT
+License-File: ziglang/lib/libc/freebsd/COPYRIGHT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Zig
+Project-URL: Homepage, https://ziglang.org
+Project-URL: Source Code, https://github.com/ziglang/zig-pypi
+Project-URL: Bug Tracker, https://github.com/ziglang/zig-pypi/issues
+Requires-Python: ~=3.5
+
+Zig PyPI distribution
+=====================
+
+[Zig][] is a general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software. The [ziglang][pypi] Python package redistributes the Zig toolchain so that it can be used as a dependency of Python projects.
+
+[zig]: https://ziglang.org/
+[pypi]: https://pypi.org/project/ziglang/
+
+Rationale
+---------
+
+Although Zig is useful in itself, the Zig toolchain includes a drop-in C and C++ compiler, [`zig cc`][zigcc], based on [clang][]. Unlike clang itself, `zig cc` is standalone: it does not require additional development files to be installed to target any of the platforms it supports. Through `zig cc`, Python code that generates C or C++ code can build it without any external dependencies.
+
+[clang]: https://clang.llvm.org/
+[zigcc]: https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html
+
+Usage
+-----
+
+To run the Zig toolchain from the command line, use:
+
+```shell
+python -m ziglang
+```
+
+To run the Zig toolchain from a Python program, use `sys.executable` to locate the Python binary to invoke. For example:
+
+```python
+import sys, subprocess
+
+subprocess.call([sys.executable, "-m", "ziglang"])
+```
+
+Binary wrapper
+--------------
+
+The [ziglang][pypi] Python package installs a binary wrapper for the Zig compiler under the name `python-zig`; the name is different to avoid conflicts with any system-wide or user-wide `zig` binaries that may be already installed.
+
+
+Using with `uv`
+---------------
+
+The Zig compiler distributed in this Python package can be launched by [uv](https://docs.astral.sh/uv) without installation:
+
+```shell
+uvx --from ziglang python-zig
+```
+
+License
+-------
+
+The [Zig license](https://github.com/ziglang/zig#license).

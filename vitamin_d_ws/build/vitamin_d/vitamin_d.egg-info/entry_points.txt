@@ -1,0 +1,4 @@
+[console_scripts]
+servo_node = vitamin_d.servo_node:main
+sub_gaze_error_node = vitamin_d.sub_gaze_error_node:main
+

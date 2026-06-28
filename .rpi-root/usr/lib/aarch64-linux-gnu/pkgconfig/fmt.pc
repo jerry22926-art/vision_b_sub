@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib/aarch64-linux-gnu
+includedir=${prefix}/include
+
+Name: fmt
+Description: A modern formatting library
+Version: 8.1.1
+Libs: -L${libdir} -lfmt
+Cflags: -I${includedir}
+

@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Coding Style Guidelines &mdash; libcamera v0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="libcamera v0.0.0 documentation" href="index.html"/>
+        <link rel="up" title="Contributing" href="contributing.html"/>
+        <link rel="prev" title="Contributing" href="contributing.html"/> 
+
+</head>
+
+<body role="document">
+  <header>
+    <div id="navbar">
+      <div class="navbar-brand">
+        <div class="navbar-logo">   _
++-/ \-+
+| (o) |
++-----+</div>
+        <div class="navbar-name"><span class="text-light">lib</span>camera</div>
+      </div>
+
+      <div class="navbar">
+        <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribute</a></li>
+</ul>
+
+        <div class="searchbox" role="search">
+          <form class="search" action="search.html" method="get">
+            <input type="text" name="q" />
+	    <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <div id="content">
+    
+    <div class="block">
+      
+  <div class="section" id="coding-style-guidelines">
+<span id="id1"></span><h1>Coding Style Guidelines<a class="headerlink" href="#coding-style-guidelines" title="Permalink to this headline">¶</a></h1>
+<p>These coding guidelines are meant to ensure code quality. As a contributor
+you are expected to follow them in all code submitted to the project. While
+strict compliance is desired, exceptions are tolerated when justified with
+good reasons. Please read the whole coding guidelines and use common sense
+to decide when departing from them is appropriate.</p>
+<p>libcamera is written in C++, a language that has seen many revisions and
+offers an extensive set of features that are easy to abuse. These coding
+guidelines establish the subset of C++ used by the project.</p>
+<div class="section" id="coding-style">
+<h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
+<p>Even if the programming language in use is different, the project embraces the
+<a class="reference external" href="https://www.kernel.org/doc/html/latest/process/coding-style.html">Linux Kernel Coding Style</a> with a few exception and some C++ specificities.</p>
+<p>In particular, from the kernel style document, the following section are adopted:</p>
+<ul class="simple">
+<li><p>1 “Indentation”</p></li>
+<li><p>2 “Breaking Long Lines” striving to fit code within 80 columns and
+accepting up to 120 columns when necessary</p></li>
+<li><p>3 “Placing Braces and Spaces”</p></li>
+<li><p>3.1 “Spaces”</p></li>
+<li><p>8 “Commenting” with the exception that in-function comments are not
+always un-welcome.</p></li>
+</ul>
+<p>While libcamera uses the kernel coding style for all typographic matters, the
+project is a user space library, developed in a different programming language,
+and the kernel guidelines fall short for this use case.</p>
+<p>For this reason, rules and guidelines from the <a class="reference external" href="https://google.github.io/styleguide/cppguide.html">Google C++ Style Guide</a> have
+been adopted as well as most coding principles specified therein, with a
+few exceptions and relaxed limitations on some subjects.</p>
+<p>The following exceptions apply to the naming conventions specified in the
+document:</p>
+<ul class="simple">
+<li><p>File names: libcamera uses the .cpp extensions for C++ source files and
+the .h extension for header files</p></li>
+<li><p>Variables, function parameters, function names and class members use
+camel case style, with the first letter in lower-case (as in ‘camelCase’
+and not ‘CamelCase’)</p></li>
+<li><p>Types (classes, structs, type aliases, and type template parameters) use
+camel case, with the first letter in capital case (as in ‘CamelCase’ and
+not ‘camelCase’)</p></li>
+<li><p>Enum members use ‘CamelCase’, while macros are in capital case with
+underscores in between</p></li>
+<li><p>All formatting rules specified in the selected sections of the Linux kernel
+Code Style for indentation, braces, spacing, etc</p></li>
+<li><p>Header guards are formatted as ‘__LIBCAMERA_FILE_NAME_H__’</p></li>
+</ul>
+<div class="section" id="order-of-includes">
+<h3>Order of Includes<a class="headerlink" href="#order-of-includes" title="Permalink to this headline">¶</a></h3>
+<p>Headers shall be included at the beginning of .c, .cpp and .h files, right
+after the file description comment block and, for .h files, the header guard
+macro. For .cpp files, if the file implements an API declared in a header file,
+that header file shall be included first in order to ensure it is
+self-contained.</p>
+<p>The headers shall be grouped and ordered as follows:</p>
+<ol class="arabic simple">
+<li><p>The header declaring the API being implemented (if any)</p></li>
+<li><p>The C and C++ system and standard library headers</p></li>
+<li><p>Other libraries’ headers, with one group per library</p></li>
+<li><p>Other project’s headers</p></li>
+</ol>
+<p>Groups of headers shall be separated by a single blank line. Headers within
+each group shall be sorted alphabetically.</p>
+<p>System and library headers shall be included with angle brackets. Project
+headers shall be included with angle brackets for the libcamera public API
+headers, and with double quotes for other libcamera headers.</p>
+</div>
+</div>
+<div class="section" id="c-specific-rules">
+<h2>C++ Specific Rules<a class="headerlink" href="#c-specific-rules" title="Permalink to this headline">¶</a></h2>
+<p>The code shall be implemented in C++14, with the following caveats:</p>
+<ul class="simple">
+<li><p>Type inference (auto and decltype) shall be used with caution, to avoid
+drifting towards an untyped language.</p></li>
+<li><p>The explicit, override and final specifiers are to be used where applicable.</p></li>
+<li><p>General-purpose smart pointers (std::unique_ptr) deprecate std::auto_ptr.
+Smart pointers, as well as shared pointers and weak pointers, shall not be
+overused.</p></li>
+<li><p>Classes are encouraged to define move constructors and assignment operators
+where applicable, and generally make use of the features offered by rvalue
+references.</p></li>
+</ul>
+<div class="section" id="object-ownership">
+<h3>Object Ownership<a class="headerlink" href="#object-ownership" title="Permalink to this headline">¶</a></h3>
+<p>libcamera creates and destroys many objects at runtime, for both objects
+internal to the library and objects exposed to the user. To guarantee proper
+operation without use after free, double free or memory leaks, knowing who owns
+each object at any time is crucial. The project has enacted a set of rules to
+make object ownership tracking as explicit and fool-proof as possible.</p>
+<p>In the context of this section, the terms object and instance are used
+interchangeably and both refer to an instance of a class. The term reference
+refers to both C++ references and C++ pointers in their capacity to refer to an
+object. Passing a reference means offering a way to a callee to obtain a
+reference to an object that the caller has a valid reference to. Borrowing a
+reference means using a reference passed by a caller without ownership transfer
+based on the assumption that the caller guarantees the validity of the
+reference for the duration of the operation that borrows it.</p>
+<ol class="arabic">
+<li><p>Single Owner Objects</p>
+<ul>
+<li><p>By default an object has a single owner at any time.</p></li>
+<li><p>Storage of single owner objects varies depending on how the object
+ownership will evolve through the lifetime of the object.</p>
+<ul class="simple">
+<li><p>Objects whose ownership needs to be transferred shall be stored as
+std::unique_ptr&lt;&gt; as much as possible to emphasize the single ownership.</p></li>
+<li><p>Objects whose owner doesn’t change may be embedded in other objects, or
+stored as pointer or references. They may be stored as std::unique_ptr&lt;&gt;
+for automatic deletion if desired.</p></li>
+</ul>
+</li>
+<li><p>Ownership is transferred by passing the reference as a std::unique_ptr&lt;&gt;
+and using std::move(). After ownership transfer the former owner has no
+valid reference to the object anymore and shall not access it without first
+obtaining a valid reference.</p></li>
+<li><p>Objects may be borrowed by passing an object reference from the owner to
+the borrower, providing that</p>
+<ul class="simple">
+<li><p>the owner guarantees the validity of the reference for the whole duration
+of the borrowing, and</p></li>
+<li><p>the borrower doesn’t access the reference after the end of the borrowing.</p></li>
+</ul>
+<p>When borrowing from caller to callee for the duration of a function call,
+this implies that the callee shall not keep any stored reference after it
+returns. These rules apply to the callee and all the functions it calls,
+directly or indirectly.</p>
+<p>When the object is stored in a std::unique_ptr&lt;&gt;, borrowing passes a
+reference to the object, not to the std::unique_ptr&lt;&gt;, as</p>
+<ul class="simple">
+<li><p>a ‘const &amp;’ when the object doesn’t need to be modified and may not be
+null.</p></li>
+<li><p>a pointer when the object may be modified or may be null. Unless
+otherwise specified, pointers passed to functions are considered as
+borrowed references valid for the duration of the function only.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Shared Objects</p>
+<ul class="simple">
+<li><p>Objects that may have multiple owners at a given time are called shared
+objects. They are reference-counted and live as long as any references to
+the object exist.</p></li>
+<li><p>Shared objects are created with std::make_shared&lt;&gt; or
+std::allocate_shared&lt;&gt; and stored in an std::shared_ptr&lt;&gt;.</p></li>
+<li><p>Ownership is shared by creating and passing copies of any valid
+std::shared_ptr&lt;&gt;. Ownership is released by destroying the corresponding
+std::shared_ptr&lt;&gt;.</p></li>
+<li><p>When passed to a function, std::shared_ptr&lt;&gt; are always passed by value,
+never by reference. The caller can decide whether to transfer its ownership
+of the std::shared_ptr&lt;&gt; with std::move() or retain it. The callee shall
+use std::move() if it needs to store the shared pointer.</p></li>
+<li><p>Do not over-use std::move(), as it may prevent copy-elision. In particular
+a function returning a std::shared_ptr&lt;&gt; value shall not use std::move() in
+its return statements, and its callers shall not wrap the function call
+with std::move().</p></li>
+<li><p>Borrowed references to shared objects are passed as references to the
+objects themselves, not to the std::shared_ptr&lt;&gt;, with the same rules as
+for single owner objects.</p></li>
+</ul>
+</li>
+</ol>
+<p>These rules match the <a class="reference external" href="https://chromium.googlesource.com/chromium/src/+/master/styleguide/c++/c++.md#object-ownership-and-calling-conventions">object ownership rules from the Chromium C++ Style Guide</a>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Long term borrowing of single owner objects is allowed. Example
+use cases are implementation of the singleton pattern (where the singleton
+guarantees the validity of the reference forever), or returning references
+to global objects whose lifetime matches the lifetime of the application. As
+long term borrowing isn’t marked through language constructs, it shall be
+documented explicitly in details in the API.</p>
+</div>
+</div>
+<div class="section" id="c-compatibility-headers">
+<h3>C Compatibility Headers<a class="headerlink" href="#c-compatibility-headers" title="Permalink to this headline">¶</a></h3>
+<p>The C++ standard defines a set of C++ standard library headers, and for some of
+them, defines C compatibility headers. The former have a name of the form
+&lt;cxxx&gt; while the later are named &lt;xxx.h&gt;. The C++ headers declare names in the
+std namespace, and may declare the same names in the global namespace. The C
+compatibility headers declare names in the global namespace, and may declare
+the same names in the std namespace. Usage of the C compatibility headers is
+strongly preferred. Code shall not rely on the optional declaration of names in
+the global or std namespace.</p>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>All public and protected classes, structures, enumerations, macros, functions
+and variables shall be documented with a Doxygen comment block, using the
+Javadoc style with C-style comments. When documenting private member functions
+and variables the same Doxygen style shall be used as for public and protected
+members.</p>
+<p>Documentation relates to header files, but shall be stored in the .cpp source
+files in order to group the implementation and documentation. Every documented
+header file shall have a file documentation block in the .cpp source file.</p>
+<p>The following comment block shows an example of correct documentation for a
+member function of the PipelineHandler class.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> \<span class="n">fn</span> <span class="n">PipelineHandler</span><span class="p">::</span><span class="n">start</span><span class="p">()</span>
+ <span class="o">*</span> \<span class="n">brief</span> <span class="n">Start</span> <span class="n">capturing</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">group</span> <span class="n">of</span> <span class="n">streams</span>
+ <span class="o">*</span> \<span class="n">param</span><span class="p">[</span><span class="ow">in</span><span class="p">]</span> <span class="n">camera</span> <span class="n">The</span> <span class="n">camera</span> <span class="n">to</span> <span class="n">start</span>
+ <span class="o">*</span>
+ <span class="o">*</span> <span class="n">Start</span> <span class="n">the</span> <span class="n">group</span> <span class="n">of</span> <span class="n">streams</span> <span class="n">that</span> <span class="n">have</span> <span class="n">been</span> <span class="n">configured</span> <span class="k">for</span> <span class="n">capture</span> <span class="n">by</span>
+ <span class="o">*</span> \<span class="n">a</span> <span class="n">configureStreams</span><span class="p">()</span><span class="o">.</span> <span class="n">The</span> <span class="n">intended</span> <span class="n">caller</span> <span class="n">of</span> <span class="n">this</span> <span class="n">method</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">Camera</span>
+ <span class="o">*</span> <span class="k">class</span> <span class="nc">which</span> <span class="n">will</span> <span class="ow">in</span> <span class="n">turn</span> <span class="n">be</span> <span class="n">called</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">application</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">that</span>
+ <span class="o">*</span> <span class="n">it</span> <span class="n">has</span> <span class="n">configured</span> <span class="n">the</span> <span class="n">streams</span> <span class="ow">and</span> <span class="ow">is</span> <span class="n">ready</span> <span class="n">to</span> <span class="n">capture</span><span class="o">.</span>
+ <span class="o">*</span>
+ <span class="o">*</span> \<span class="k">return</span> <span class="mi">0</span> <span class="n">on</span> <span class="n">success</span> <span class="ow">or</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">error</span> <span class="n">code</span> <span class="n">otherwise</span>
+ <span class="o">*/</span>
+</pre></div>
+</div>
+<p>The comment block shall be placed right before the function it documents. If
+the function is defined inline in the class definition in the header file, the
+comment block shall be placed alone in the .cpp source file in the same order
+as the function definitions in the header file and shall start with an fn
+line. Otherwise no fn line shall be present.</p>
+<p>The brief directive shall be present. If the function takes parameters, param
+directives shall be present, with the appropriate [in], [out] or [inout]
+specifiers. Only when the direction of the parameters isn’t known (for instance
+when defining a template function with variadic arguments) the direction
+specifier shall be omitted. The return directive shall be present when the
+function returns a value, and shall be omitted otherwise.</p>
+<p>The long description is optional. When present it shall be surrounded by empty
+lines and may span multiple paragraphs. No blank lines shall otherwise be added
+between the fn, brief, param and return directives.</p>
+</div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>The ‘clang-format’ code formatting tool can be used to reformat source files
+with the libcamera coding style, defined in the .clang-format file at the root
+of the source tree.</p>
+<p>Alternatively the ‘astyle’ tool can also be used, with the following arguments.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">style</span><span class="o">=</span><span class="n">linux</span>
+<span class="o">--</span><span class="n">indent</span><span class="o">=</span><span class="n">force</span><span class="o">-</span><span class="n">tab</span><span class="o">=</span><span class="mi">8</span>
+<span class="o">--</span><span class="n">attach</span><span class="o">-</span><span class="n">namespaces</span>
+<span class="o">--</span><span class="n">attach</span><span class="o">-</span><span class="n">extern</span><span class="o">-</span><span class="n">c</span>
+<span class="o">--</span><span class="n">pad</span><span class="o">-</span><span class="n">oper</span>
+<span class="o">--</span><span class="n">align</span><span class="o">-</span><span class="n">pointer</span><span class="o">=</span><span class="n">name</span>
+<span class="o">--</span><span class="n">align</span><span class="o">-</span><span class="n">reference</span><span class="o">=</span><span class="n">name</span>
+<span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">code</span><span class="o">-</span><span class="n">length</span><span class="o">=</span><span class="mi">120</span>
+</pre></div>
+</div>
+<p>Use of astyle is discouraged as clang-format better matches the libcamera coding
+style.</p>
+<p>As both astyle and clang-format are code formatters, they operate on full files
+and output reformatted source code. While they can be used to reformat code
+before sending patches, it may generate unrelated changes. To avoid this,
+libcamera provides a ‘checkstyle.py’ script wrapping the formatting tools to
+only retain related changes. This should be used to validate modifications
+before submitting them for review.</p>
+<p>The script operates on one or multiple git commits specified on the command
+line. It does not modify the git tree, the index or the working directory and
+is thus safe to run at any point.</p>
+<p>Commits are specified using the same revision range syntax as ‘git log’. The
+most usual use cases are to specify a single commit by sha1, branch name or tag
+name, or a commit range with the &lt;from&gt;..&lt;to&gt; syntax. When no arguments are
+given, the topmost commit of the current branch is selected.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./utils/checkstyle.py cc7d204b2c51
+----------------------------------------------------------------------------------
+cc7d204b2c51853f7d963d144f5944e209e7ea29 libcamera: Use the logger instead of cout
+----------------------------------------------------------------------------------
+No style issue detected
+</pre></div>
+</div>
+<p>When operating on a range of commits, style checks are performed on each commit
+from oldest to newest.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ../utils/checkstyle.py 3b56ddaa96fb~3..3b56ddaa96fb
+----------------------------------------------------------------------------------
+b4351e1a6b83a9cfbfc331af3753602a02dbe062 libcamera: log: Fix Doxygen documentation
+----------------------------------------------------------------------------------
+No style issue detected
+
+--------------------------------------------------------------------------------------
+6ab3ff4501fcfa24db40fcccbce35bdded7cd4bc libcamera: log: Document the LogMessage class
+--------------------------------------------------------------------------------------
+No style issue detected
+
+---------------------------------------------------------------------------------
+3b56ddaa96fbccf4eada05d378ddaa1cb6209b57 build: Add &#39;std=c++11&#39; cpp compiler flag
+---------------------------------------------------------------------------------
+Commit doesn&#39;t touch source files, skipping
+</pre></div>
+</div>
+<p>Commits that do not touch any .c, .cpp or .h files are skipped.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./utils/checkstyle.py edbd2059d8a4
+----------------------------------------------------------------------
+edbd2059d8a4bd759302ada4368fa4055638fd7f libcamera: Add initial logger
+----------------------------------------------------------------------
+--- src/libcamera/include/log.h
++++ src/libcamera/include/log.h
+@@ -21,11 +21,14 @@
+ {
+ public:
+        LogMessage(const char *fileName, unsigned int line,
+-                 LogSeverity severity);
+-       LogMessage(const LogMessage&amp;) = delete;
++                  LogSeverity severity);
++       LogMessage(const LogMessage &amp;) = delete;
+        ~LogMessage();
+
+-       std::ostream&amp; stream() { return msgStream; }
++       std::ostream &amp;stream()
++       {
++               return msgStream;
++       }
+
+ private:
+        std::ostringstream msgStream;
+
+--- src/libcamera/log.cpp
++++ src/libcamera/log.cpp
+@@ -42,7 +42,7 @@
+
+ static const char *log_severity_name(LogSeverity severity)
+ {
+-       static const char * const names[] = {
++       static const char *const names[] = {
+                &quot;INFO&quot;,
+                &quot;WARN&quot;,
+                &quot; ERR&quot;,
+
+---
+2 potential style issues detected, please review
+</pre></div>
+</div>
+<p>When potential style issues are detected, they are displayed in the form of a
+diff that fixes the issues, on top of the corresponding commit. As the script is
+in early development false positive are expected. The flagged issues should be
+reviewed, but the diff doesn’t need to be applied blindly.</p>
+<p>The checkstyle.py script uses clang-format by default if found, and otherwise
+falls back to astyle. The formatter can be manually selected with the
+‘–formatter’ argument.</p>
+<p>Happy hacking, libcamera awaits your patches!</p>
+</div>
+</div>
+
+
+    </div>
+  </div>
+
+  
+<footer>
+  <div id="signature">
+        &copy; Copyright 2018-2021, The libcamera documentation authors.
+  </div>
+</footer>
+</body>
+</html>

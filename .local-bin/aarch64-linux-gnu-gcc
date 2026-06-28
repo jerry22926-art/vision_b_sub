@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+args=()
+for arg in "$@"; do
+  case "$arg" in
+    -Wl,-Bsymbolic-functions) ;;
+    *) args+=("$arg") ;;
+  esac
+done
+exec python -m ziglang cc "${args[@]}"

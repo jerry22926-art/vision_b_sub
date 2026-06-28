@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec python -m ziglang cc -E -x c -I/home/vitamind/vitamin_d/.apt-root/usr/include -I/home/vitamind/vitamin_d/.apt-root/usr/include/aarch64-linux-gnu - "$@"

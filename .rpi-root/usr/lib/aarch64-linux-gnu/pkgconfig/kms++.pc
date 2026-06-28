@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=${prefix}/include
+libdir=${prefix}/lib/aarch64-linux-gnu
+
+Name: kms++
+Description: kms++: kms++
+Version: 0.0.0
+Requires.private: libdrm, fmt
+Libs: -L${libdir} -lkms++
+Cflags: -I${includedir}

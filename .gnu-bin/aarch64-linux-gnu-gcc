@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec /home/vitamind/vitamin_d/.gcc-root/usr/bin/aarch64-linux-gnu-gcc-11 -B/home/vitamind/vitamin_d/.gcc-root/usr/lib/gcc/aarch64-linux-gnu/11/ -B/home/vitamind/vitamin_d/.gcc-root/usr/bin/ "$@"
