@@ -28,20 +28,36 @@ class ServoNode(Node):
         self.declare_parameter('input_topic', '/gaze_error_cmd')
         self.declare_parameter('pan_channel', 0)
         self.declare_parameter('tilt_channel', 1)
-        self.declare_parameter('center_angle', 90.0)
-        self.declare_parameter('min_angle', 20.0)
-        self.declare_parameter('max_angle', 160.0)
-        self.declare_parameter('gain', 0.08)
+        self.declare_parameter('pan_center_angle', 90.0)
+        self.declare_parameter('pan_min_angle', 20.0)
+        self.declare_parameter('pan_max_angle', 160.0)
+        self.declare_parameter('tilt_center_angle', 40.0)
+        self.declare_parameter('tilt_min_angle', 20.0)
+        self.declare_parameter('tilt_max_angle', 60.0)
+        self.declare_parameter('pan_gain', 0.02)
+        self.declare_parameter('tilt_gain', 0.01)
         self.declare_parameter('deadzone', 2.0)
 
         input_topic = self.get_parameter('input_topic').value
         pan_channel = self.get_parameter('pan_channel').value
         tilt_channel = self.get_parameter('tilt_channel').value
 
-        self.center_angle = float(self.get_parameter('center_angle').value)
-        self.min_angle = float(self.get_parameter('min_angle').value)
-        self.max_angle = float(self.get_parameter('max_angle').value)
-        self.gain = float(self.get_parameter('gain').value)
+        self.pan_center_angle = float(
+            self.get_parameter('pan_center_angle').value
+        )
+        self.pan_min_angle = float(self.get_parameter('pan_min_angle').value)
+        self.pan_max_angle = float(self.get_parameter('pan_max_angle').value)
+        self.tilt_center_angle = float(
+            self.get_parameter('tilt_center_angle').value
+        )
+        self.tilt_min_angle = float(
+            self.get_parameter('tilt_min_angle').value
+        )
+        self.tilt_max_angle = float(
+            self.get_parameter('tilt_max_angle').value
+        )
+        self.pan_gain = float(self.get_parameter('pan_gain').value)
+        self.tilt_gain = float(self.get_parameter('tilt_gain').value)
         self.deadzone = float(self.get_parameter('deadzone').value)
 
         self.i2c = board.I2C()
@@ -59,8 +75,8 @@ class ServoNode(Node):
             max_pulse=2500,
         )
 
-        self.pan_angle = self.center_angle
-        self.tilt_angle = self.center_angle
+        self.pan_angle = self.pan_center_angle
+        self.tilt_angle = self.tilt_center_angle
         self.set_servo_angles(self.pan_angle, self.tilt_angle)
 
         self.subscription = self.create_subscription(
@@ -79,8 +95,16 @@ class ServoNode(Node):
         x_error = 0.0 if abs(msg.x) < self.deadzone else msg.x
         y_error = 0.0 if abs(msg.y) < self.deadzone else msg.y
 
-        self.pan_angle = self.clamp(self.pan_angle - (x_error * self.gain))
-        self.tilt_angle = self.clamp(self.tilt_angle + (y_error * self.gain))
+        self.pan_angle = self.clamp(
+            self.pan_angle - (x_error * self.pan_gain),
+            self.pan_min_angle,
+            self.pan_max_angle,
+        )
+        self.tilt_angle = self.clamp(
+            self.tilt_angle - (y_error * self.tilt_gain),
+            self.tilt_min_angle,
+            self.tilt_max_angle,
+        )
 
         self.set_servo_angles(self.pan_angle, self.tilt_angle)
         self.get_logger().info(
@@ -92,11 +116,15 @@ class ServoNode(Node):
         self.pan_servo.angle = pan_angle
         self.tilt_servo.angle = tilt_angle
 
-    def clamp(self, angle):
-        return max(self.min_angle, min(self.max_angle, angle))
+    @staticmethod
+    def clamp(angle, min_angle, max_angle):
+        return max(min_angle, min(max_angle, angle))
 
     def destroy_node(self):
-        self.set_servo_angles(self.center_angle, self.center_angle)
+        self.set_servo_angles(
+            self.pan_center_angle,
+            self.tilt_center_angle,
+        )
         self.pca.deinit()
         super().destroy_node()
 

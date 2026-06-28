@@ -1,0 +1,24 @@
+running egg_info
+writing ../../build/vitamin_d/vitamin_d.egg-info/PKG-INFO
+writing dependency_links to ../../build/vitamin_d/vitamin_d.egg-info/dependency_links.txt
+writing entry points to ../../build/vitamin_d/vitamin_d.egg-info/entry_points.txt
+writing requirements to ../../build/vitamin_d/vitamin_d.egg-info/requires.txt
+writing top-level names to ../../build/vitamin_d/vitamin_d.egg-info/top_level.txt
+reading manifest file '../../build/vitamin_d/vitamin_d.egg-info/SOURCES.txt'
+writing manifest file '../../build/vitamin_d/vitamin_d.egg-info/SOURCES.txt'
+running build
+running build_py
+copying vitamin_d/servo_node.py -> /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/build/lib/vitamin_d
+running install
+running install_lib
+copying /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/build/lib/vitamin_d/servo_node.py -> /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d
+byte-compiling /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d/servo_node.py to servo_node.cpython-310.pyc
+running install_data
+copying package.xml -> /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/share/vitamin_d
+running install_egg_info
+removing '/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/vitamin_d/vitamin_d.egg-info to /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d-0.0.0-py3.10.egg-info
+running install_scripts
+Installing servo_node script to /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/vitamin_d
+Installing sub_gaze_error_node script to /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/vitamin_d
+writing list of installed files to '/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/install.log'

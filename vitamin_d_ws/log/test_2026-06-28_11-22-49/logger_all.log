@@ -1,0 +1,85 @@
+[0.923s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'test', '--packages-select', 'vitamin_d', '--event-handlers', 'console_direct+']
+[0.923s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test', build_base='build', install_base='install', merge_install=False, test_result_base=None, retest_until_fail=0, retest_until_pass=0, abort_on_error=False, return_code_on_test_failure=False, executor='parallel', parallel_workers=4, event_handlers=['console_direct+'], ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['vitamin_d'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], ctest_args=None, python_testing=None, pytest_args=None, pytest_with_coverage=False, unittest_args=None, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa0c3a440>, verb_extension=<colcon_core.verb.test.TestVerb object at 0xffffa0ddaa40>, main=<bound method TestVerb.main of <colcon_core.verb.test.TestVerb object at 0xffffa0ddaa40>>, mixin_verb=('test',))
+[1.866s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.867s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.867s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.867s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.868s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.868s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vitamind/vitamin_d/vitamin_d_ws'
+[1.869s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.871s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.871s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.871s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.871s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.872s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.872s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.924s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.924s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.925s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.926s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.926s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.927s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.928s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.930s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.932s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.933s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.934s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.935s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.936s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.937s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.937s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.937s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.938s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.938s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.938s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.939s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.939s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.939s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.940s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.940s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extensions ['ignore', 'ignore_ament_install']
+[1.941s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extension 'ignore'
+[1.942s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extension 'ignore_ament_install'
+[1.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extensions ['colcon_pkg']
+[1.943s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extension 'colcon_pkg'
+[1.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extensions ['colcon_meta']
+[1.944s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extension 'colcon_meta'
+[1.945s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extensions ['ros']
+[1.946s] Level 1:colcon.colcon_core.package_identification:_identify(src/vitamin_d) by extension 'ros'
+[1.956s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vitamin_d' with type 'ros.ament_python' and name 'vitamin_d'
+[1.957s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.958s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.958s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.958s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.958s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.971s] Level 5:colcon.colcon_core.verb:set package 'vitamin_d' test argument 'ctest_args' from command line to 'None'
+[1.972s] Level 5:colcon.colcon_core.verb:set package 'vitamin_d' test argument 'python_testing' from command line to 'None'
+[1.972s] Level 5:colcon.colcon_core.verb:set package 'vitamin_d' test argument 'pytest_args' from command line to 'None'
+[1.973s] Level 5:colcon.colcon_core.verb:set package 'vitamin_d' test argument 'pytest_with_coverage' from command line to 'False'
+[1.973s] Level 5:colcon.colcon_core.verb:set package 'vitamin_d' test argument 'unittest_args' from command line to 'None'
+[1.973s] Level 5:colcon.colcon_core.verb:set package 'vitamin_d' test argument 'retest_until_pass' from command line to '0'
+[1.973s] Level 5:colcon.colcon_core.verb:set package 'vitamin_d' test argument 'retest_until_fail' from command line to '0'
+[1.973s] DEBUG:colcon.colcon_core.verb.test:Testing package 'vitamin_d' with the following arguments: {'build_base': '/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d', 'ctest_args': None, 'install_base': '/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d', 'path': '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d', 'pytest_args': None, 'pytest_with_coverage': False, 'python_testing': None, 'retest_until_fail': 0, 'retest_until_pass': 0, 'test_result_base': None, 'unittest_args': None}
+[1.974s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.978s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.980s] INFO:colcon.colcon_ros.task.ament_python.test:Testing ROS package in '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d' with build type'ament_python'
+[1.981s] INFO:colcon.colcon_core.task.python.test:Testing Python package in '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d'
+[1.992s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.994s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.994s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.449s] Level 1:colcon.colcon_core.task.python.test:test() by extension 'pytest'
+[3.450s] Level 1:colcon.colcon_core.task.python.test:test.step() by extension 'pytest'
+[3.472s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d': AMENT_PREFIX_PATH=/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/pytest.xml --junit-prefix=vitamin_d -o cache_dir=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[6.715s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.717s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.718s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.718s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.718s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d' returned '0': AMENT_PREFIX_PATH=/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/pytest.xml --junit-prefix=vitamin_d -o cache_dir=/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[6.723s] DEBUG:colcon.colcon_core.event_reactor:joined thread

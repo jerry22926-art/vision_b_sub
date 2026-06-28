@@ -1,0 +1,19 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/.pytest_cache
+rootdir: /home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d
+plugins: ament-lint-0.12.15, ament-xmllint-0.12.15, ament-flake8-0.12.15, ament-pep257-0.12.15, launch-testing-1.0.14, launch-testing-ros-0.19.13, ament-copyright-0.12.15, colcon-core-0.21.0, cov-3.0.0
+collected 3 items
+
+test/test_copyright.py s                                                 [ 33%]
+test/test_flake8.py .                                                    [ 66%]
+
+=============================== warnings summary ===============================
+test/test_flake8.py::test_flake8
+test/test_flake8.py::test_flake8
+  Warning: SelectableGroups dict interface is deprecated. Use select.
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+test/test_pep257.py .                                                    [100%]
+- generated xml file: /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/pytest.xml -
+=================== 2 passed, 1 skipped, 2 warnings in 1.16s ===================

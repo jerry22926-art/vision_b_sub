@@ -1,4 +1,4 @@
-#!/home/vitamind/vitamin_d/vitamin_d/bin/python3.10
+#!/home/vitamind/vitamin_d/vitamin_d/bin/python
 import sys
 from pybind11.__main__ import main
 if __name__ == '__main__':

@@ -1,0 +1,83 @@
+[0.000000] (-) TimerEvent: {}
+[0.001037] (vitamin_d) JobQueued: {'identifier': 'vitamin_d', 'dependencies': OrderedDict()}
+[0.002419] (vitamin_d) JobStarted: {'identifier': 'vitamin_d'}
+[0.099092] (-) TimerEvent: {}
+[0.201497] (-) TimerEvent: {}
+[0.302491] (-) TimerEvent: {}
+[0.403235] (-) TimerEvent: {}
+[0.503990] (-) TimerEvent: {}
+[0.604732] (-) TimerEvent: {}
+[0.705154] (-) TimerEvent: {}
+[0.805553] (-) TimerEvent: {}
+[0.905961] (-) TimerEvent: {}
+[1.006680] (-) TimerEvent: {}
+[1.107290] (-) TimerEvent: {}
+[1.207803] (-) TimerEvent: {}
+[1.308294] (-) TimerEvent: {}
+[1.408901] (-) TimerEvent: {}
+[1.509444] (-) TimerEvent: {}
+[1.610080] (-) TimerEvent: {}
+[1.710569] (-) TimerEvent: {}
+[1.811024] (-) TimerEvent: {}
+[1.911455] (-) TimerEvent: {}
+[2.011932] (-) TimerEvent: {}
+[2.112488] (-) TimerEvent: {}
+[2.213102] (-) TimerEvent: {}
+[2.313631] (-) TimerEvent: {}
+[2.414030] (-) TimerEvent: {}
+[2.514467] (-) TimerEvent: {}
+[2.615037] (-) TimerEvent: {}
+[2.715516] (-) TimerEvent: {}
+[2.816003] (-) TimerEvent: {}
+[2.916532] (-) TimerEvent: {}
+[3.016992] (-) TimerEvent: {}
+[3.117444] (-) TimerEvent: {}
+[3.218159] (-) TimerEvent: {}
+[3.318945] (-) TimerEvent: {}
+[3.419818] (-) TimerEvent: {}
+[3.521164] (-) TimerEvent: {}
+[3.622138] (-) TimerEvent: {}
+[3.723184] (-) TimerEvent: {}
+[3.726163] (vitamin_d) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/vitamin_d', 'build', '--build-base', '/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/build', 'install', '--record', '/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/install.log', '--install-scripts', '$base/lib/vitamin_d', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/vitamind/vitamin_d/vitamin_d_ws/src/vitamin_d', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/vitamind', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'USER': 'vitamind', 'SSH_CLIENT': '192.168.137.233 50580 22', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/vitamind/.vscode-server/cli/servers/Stable-7e7950df89d055b5a378379db9ee14290772148a/server/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'tty', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/vitamind/.vscode-server/cli/servers/Stable-7e7950df89d055b5a378379db9ee14290772148a/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/vitamind', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-bc15cc7b-804e-4c0d-ae5e-08522dfe1750.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'humble', 'LOGNAME': 'vitamind', 'VSCODE_HANDLES_SIGPIPE': 'true', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'RUST_LOG': 'warn', 'TERM': 'dumb', 'XDG_SESSION_ID': '4', 'VSCODE_CLI_REQUIRE_TOKEN': '9060920d-7811-487b-a9ca-bc22f15e2175', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/vitamind/.codex/tmp/arg0/codex-arg0C7uToZ:/home/vitamind/.vscode-server/cli/servers/Stable-7e7950df89d055b5a378379db9ee14290772148a/server/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/vitamind/.vscode-server/extensions/openai.chatgpt-26.623.42026-linux-arm64/bin/linux-aarch64', 'VSCODE_AGENT_FOLDER': '/home/vitamind/.vscode-server', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'GH_PAGER': 'cat', 'LS_COLORS': '', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019f0e60-f8b5-7712-8346-1d3e42e64953', 'GIT_PAGER': 'cat', 'PWD': '/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d', 'LC_ALL': 'C.UTF-8', 'SSH_CONNECTION': '192.168.137.233 50580 192.168.137.254 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[3.823368] (-) TimerEvent: {}
+[3.923816] (-) TimerEvent: {}
+[4.024517] (-) TimerEvent: {}
+[4.124953] (-) TimerEvent: {}
+[4.225392] (-) TimerEvent: {}
+[4.325849] (-) TimerEvent: {}
+[4.426273] (-) TimerEvent: {}
+[4.526661] (-) TimerEvent: {}
+[4.627093] (-) TimerEvent: {}
+[4.727595] (-) TimerEvent: {}
+[4.828096] (-) TimerEvent: {}
+[4.906874] (vitamin_d) StdoutLine: {'line': b'running egg_info\n'}
+[4.910142] (vitamin_d) StdoutLine: {'line': b'writing ../../build/vitamin_d/vitamin_d.egg-info/PKG-INFO\n'}
+[4.911621] (vitamin_d) StdoutLine: {'line': b'writing dependency_links to ../../build/vitamin_d/vitamin_d.egg-info/dependency_links.txt\n'}
+[4.913481] (vitamin_d) StdoutLine: {'line': b'writing entry points to ../../build/vitamin_d/vitamin_d.egg-info/entry_points.txt\n'}
+[4.914766] (vitamin_d) StdoutLine: {'line': b'writing requirements to ../../build/vitamin_d/vitamin_d.egg-info/requires.txt\n'}
+[4.916405] (vitamin_d) StdoutLine: {'line': b'writing top-level names to ../../build/vitamin_d/vitamin_d.egg-info/top_level.txt\n'}
+[4.924768] (vitamin_d) StdoutLine: {'line': b"reading manifest file '../../build/vitamin_d/vitamin_d.egg-info/SOURCES.txt'\n"}
+[4.928253] (-) TimerEvent: {}
+[4.930538] (vitamin_d) StdoutLine: {'line': b"writing manifest file '../../build/vitamin_d/vitamin_d.egg-info/SOURCES.txt'\n"}
+[4.931532] (vitamin_d) StdoutLine: {'line': b'running build\n'}
+[4.932806] (vitamin_d) StdoutLine: {'line': b'running build_py\n'}
+[4.933462] (vitamin_d) StdoutLine: {'line': b'copying vitamin_d/servo_node.py -> /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/build/lib/vitamin_d\n'}
+[4.934795] (vitamin_d) StdoutLine: {'line': b'running install\n'}
+[4.936635] (vitamin_d) StdoutLine: {'line': b'running install_lib\n'}
+[4.940222] (vitamin_d) StdoutLine: {'line': b'copying /home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/build/lib/vitamin_d/servo_node.py -> /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d\n'}
+[4.943482] (vitamin_d) StdoutLine: {'line': b'byte-compiling /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d/servo_node.py to servo_node.cpython-310.pyc\n'}
+[4.949043] (vitamin_d) StdoutLine: {'line': b'running install_data\n'}
+[4.952300] (vitamin_d) StdoutLine: {'line': b'copying package.xml -> /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/share/vitamin_d\n'}
+[4.953742] (vitamin_d) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.964655] (vitamin_d) StdoutLine: {'line': b"removing '/home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.980423] (vitamin_d) StdoutLine: {'line': b'Copying ../../build/vitamin_d/vitamin_d.egg-info to /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/python3.10/site-packages/vitamin_d-0.0.0-py3.10.egg-info\n'}
+[4.989046] (vitamin_d) StdoutLine: {'line': b'running install_scripts\n'}
+[5.028444] (-) TimerEvent: {}
+[5.072125] (vitamin_d) StdoutLine: {'line': b'Installing servo_node script to /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/vitamin_d\n'}
+[5.081864] (vitamin_d) StdoutLine: {'line': b'Installing sub_gaze_error_node script to /home/vitamind/vitamin_d/vitamin_d_ws/install/vitamin_d/lib/vitamin_d\n'}
+[5.084867] (vitamin_d) StdoutLine: {'line': b"writing list of installed files to '/home/vitamind/vitamin_d/vitamin_d_ws/build/vitamin_d/install.log'\n"}
+[5.128760] (-) TimerEvent: {}
+[5.210641] (vitamin_d) CommandEnded: {'returncode': 0}
+[5.228907] (-) TimerEvent: {}
+[5.294977] (vitamin_d) JobEnded: {'identifier': 'vitamin_d', 'rc': 0}
+[5.299417] (-) EventReactorShutdown: {}
